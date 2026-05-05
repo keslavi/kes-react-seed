@@ -1,0 +1,200 @@
+[
+  {
+    "text": "Char Count",
+    "rect": {
+      "x": 107,
+      "y": 5142.8125,
+      "width": 268,
+      "height": 15.390625
+    }
+  },
+  {
+    "text": "Body",
+    "rect": {
+      "x": 399,
+      "y": 5142.8125,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Names (checkbox)",
+    "rect": {
+      "x": 107,
+      "y": 5239.265625,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Names2 (multiselect)",
+    "rect": {
+      "x": 399,
+      "y": 5239.265625,
+      "width": 536,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Status (select)",
+    "rect": {
+      "x": 107,
+      "y": 5309.953125,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Result (autocomplete)",
+    "rect": {
+      "x": 399,
+      "y": 5309.953125,
+      "width": 268,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Date of Birth (MM/DD/YYYY)",
+    "rect": {
+      "x": 107,
+      "y": 5460.640625,
+      "width": 244,
+      "height": 0
+    }
+  },
+  {
+    "text": "Date of Birth (MM/DD/YYYY)",
+    "rect": {
+      "x": 107,
+      "y": 5460.640625,
+      "width": 244,
+      "height": 0
+    }
+  },
+  {
+    "text": "Date of Birth (MM/DD/YYYY)",
+    "rect": {
+      "x": 107,
+      "y": 5460.640625,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Date of Birth (Empty)",
+    "rect": {
+      "x": 399,
+      "y": 5460.640625,
+      "width": 244,
+      "height": 0
+    }
+  },
+  {
+    "text": "Date of Birth (Empty)",
+    "rect": {
+      "x": 399,
+      "y": 5460.640625,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Date of Birth (Empty)",
+    "rect": {
+      "x": 399,
+      "y": 5515.328125,
+      "width": 244,
+      "height": 0
+    }
+  },
+  {
+    "text": "Date of Birth (Datepicker)",
+    "rect": {
+      "x": 691,
+      "y": 5460.640625,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "SSN",
+    "rect": {
+      "x": 107,
+      "y": 5560.875,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "whatever",
+    "rect": {
+      "x": 399,
+      "y": 5560.875,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Date of Birth (Datepicker)",
+    "rect": {
+      "x": 691,
+      "y": 5560.875,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Body",
+    "rect": {
+      "x": 983,
+      "y": 5560.875,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "SSN2",
+    "rect": {
+      "x": 107,
+      "y": 5673.328125,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "SSN (Partial Mask)",
+    "rect": {
+      "x": 107,
+      "y": 5744.40625,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "License Plate",
+    "rect": {
+      "x": 107,
+      "y": 5815.484375,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Password",
+    "rect": {
+      "x": 107,
+      "y": 6241.9375,
+      "width": 244,
+      "height": 18.6875
+    }
+  },
+  {
+    "text": "Confirm Password",
+    "rect": {
+      "x": 399,
+      "y": 6241.9375,
+      "width": 244,
+      "height": 18.6875
+    }
+  }
+]

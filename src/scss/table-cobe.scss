@@ -1,0 +1,18 @@
+.table-cobe-span table {
+  border-collapse:collapse;
+  width: -webkit-fill-available;
+  text-align: justify;
+}
+.table-cobe-span tr{
+  border: 1px solid #d1c9c0;
+}
+.table-cobe-span th{
+  border:none;
+  padding: 1em;
+}
+.table-cobe-span td p{
+  border:none;
+  padding: 1em;
+  width:18%;
+  vertical-align: top;
+} 

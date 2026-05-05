@@ -1,0 +1,124 @@
+.kanban-container {
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+    flex-shrink: 0;
+  }
+}
+
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  min-width: 800px;
+  padding-bottom: 20px;
+  flex: 1;
+}
+
+.kanban-column {
+  flex: 1;
+  min-width: 280px;
+  background-color: #f4f5f7;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #172b4d;
+    text-transform: capitalize;
+  }
+
+  .task-count {
+    background-color: #dfe1e6;
+    color: #42526e;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.kanban-column-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+}
+
+.kanban-card {
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.kanban-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.kanban-card-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.kanban-card-body {
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.kanban-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.kanban-empty {
+  text-align: center;
+  padding: 20px;
+}
+
+// Scrollbar styling
+.kanban-column-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.kanban-column-content::-webkit-scrollbar-track {
+  background: #f4f5f7;
+  border-radius: 4px;
+}
+
+.kanban-column-content::-webkit-scrollbar-thumb {
+  background: #dfe1e6;
+  border-radius: 4px;
+
+  &:hover {
+    background: #c1c7d0;
+  }
+}

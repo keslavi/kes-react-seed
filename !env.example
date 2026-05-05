@@ -1,0 +1,20 @@
+# Copy this file to .env.local and fill in your actual values
+
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=your_database_name
+DB_USER=your_username
+DB_PASSWORD=your_password
+
+# API Keys
+API_KEY=your_api_key_here
+SECRET_KEY=your_secret_key_here
+MOCK_DATA_KEY=your_mock_data_encryption_key
+MOCK_DATA_ENCRYPTED_ONLY=true
+VITE_MOCK_DATA_ENCRYPTED_ONLY=true
+
+# Application Settings
+NODE_ENV=development
+PORT=3000
+BASE_URL=http://localhost:3000

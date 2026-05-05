@@ -1,0 +1,443 @@
+[
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-k0i5s6-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"CoPresentIcon\"><path d=\"M21 3H3c-1.1 0-2 .9-2 2v8h2V5h18v16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2\"></path><circle cx=\"9\" cy=\"10\" r=\"4\"></circle><path d=\"M15.39 16.56C13.71 15.7 11.53 15 9 15s-4.71.7-6.39 1.56C1.61 17.07 1 18.1 1 19.22V22h16v-2.78c0-1.12-.61-2.15-1.61-2.66\"></path></svg>",
+    "rect": {
+      "x": 24,
+      "y": 17.25,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"MenuIcon\"><path d=\"M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z\"></path></svg>",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3s8ksi-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"CoPresentIcon\"><path d=\"M21 3H3c-1.1 0-2 .9-2 2v8h2V5h18v16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2\"></path><circle cx=\"9\" cy=\"10\" r=\"4\"></circle><path d=\"M15.39 16.56C13.71 15.7 11.53 15 9 15s-4.71.7-6.39 1.56C1.61 17.07 1 18.1 1 19.22V22h16v-2.78c0-1.12-.61-2.15-1.61-2.66\"></path></svg>",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-8hoymy-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"SuccessOutlinedIcon\"><path d=\"M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2, 4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0, 0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z\"></path></svg>",
+    "rect": {
+      "x": 160,
+      "y": 3755.875,
+      "width": 22,
+      "height": 22
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-8hoymy-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"InfoOutlinedIcon\"><path d=\"M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20, 12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10, 10 0 0,0 12,2M11,17H13V11H11V17Z\"></path></svg>",
+    "rect": {
+      "x": 160,
+      "y": 3833.6875,
+      "width": 22,
+      "height": 22
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-8hoymy-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ReportProblemOutlinedIcon\"><path d=\"M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z\"></path></svg>",
+    "rect": {
+      "x": 160,
+      "y": 3911.5,
+      "width": 22,
+      "height": 22
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-8hoymy-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ErrorOutlineIcon\"><path d=\"M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z\"></path></svg>",
+    "rect": {
+      "x": 160,
+      "y": 3989.3125,
+      "width": 22,
+      "height": 22
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-w4d4z2-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"CheckCircleIcon\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z\"></path></svg>",
+    "rect": {
+      "x": 325.65625,
+      "y": 4470.96875,
+      "width": 16,
+      "height": 16
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fk1q6p-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"CheckCircleIcon\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z\"></path></svg>",
+    "rect": {
+      "x": 349.578125,
+      "y": 4462.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-1le4mqy-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"CheckCircleIcon\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z\"></path></svg>",
+    "rect": {
+      "x": 381.5,
+      "y": 4458.96875,
+      "width": 28,
+      "height": 28
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-1pm931s-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ExpandMoreIcon\"><path d=\"M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z\"></path></svg>",
+    "rect": {
+      "x": 508.3125,
+      "y": 4482.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-m2we8c-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ExpandMoreIcon\"><path d=\"M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z\"></path></svg>",
+    "rect": {
+      "x": 508.3125,
+      "y": 4513.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-1pm931s-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ExpandMoreIcon\"><path d=\"M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4592.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fknqjz-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"AddIcon\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4624.96875,
+      "width": 16,
+      "height": 16
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fknqjz-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ArrowForwardIosIcon\"><path d=\"M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4648.96875,
+      "width": 16,
+      "height": 16
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fknqjz-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ArrowBackIcon\"><path d=\"M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4672.96875,
+      "width": 16,
+      "height": 16
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fknqjz-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ArrowBackIcon\"><path d=\"M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4696.96875,
+      "width": 16,
+      "height": 16
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fknqjz-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ArrowForwardIosIcon\"><path d=\"M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4720.96875,
+      "width": 16,
+      "height": 16
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fknqjz-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ArrowBackIcon\"><path d=\"M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4744.96875,
+      "width": 16,
+      "height": 16
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fk1q6p-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"CheckCircleIcon\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4767.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fk1q6p-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"CheckCircleIcon\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4798.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fk1q6p-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"CheckCircleOutlineIcon\"><path d=\"M16.59 7.58 10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4829.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-1pm931s-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ExpandMoreIcon\"><path d=\"M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4860.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-1pm931s-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ExpandMoreIcon\"><path d=\"M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4891.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fknqjz-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ArrowForwardIosIcon\"><path d=\"M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4923.96875,
+      "width": 16,
+      "height": 16
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-fknqjz-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"RemoveIcon\"><path d=\"M19 13H5v-2h14z\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4947.96875,
+      "width": 16,
+      "height": 16
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium iconRoot css-1kpqa1k-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"PanoramaFishEyeSharpIcon\"><path d=\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8\"></path></svg>",
+    "rect": {
+      "x": 143,
+      "y": 4970.96875,
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-p1fwz7-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"KeyboardArrowDownIcon\"><path d=\"M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z\"></path></svg>",
+    "rect": {
+      "x": 338.578125,
+      "y": 5264.2421875,
+      "width": 27.421875,
+      "height": 27.421875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-isbajm-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"IconHelpRounded\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4\"></path></svg>",
+    "rect": {
+      "x": 353.8125,
+      "y": 5236.265625,
+      "width": 19.1875,
+      "height": 19.1875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-p1fwz7-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"KeyboardArrowDownIcon\"><path d=\"M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z\"></path></svg>",
+    "rect": {
+      "x": 922.578125,
+      "y": 5264.2421875,
+      "width": 27.421875,
+      "height": 27.421875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-isbajm-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"IconHelpRounded\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4\"></path></svg>",
+    "rect": {
+      "x": 353.8125,
+      "y": 5306.953125,
+      "width": 19.1875,
+      "height": 19.1875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-p1fwz7-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"KeyboardArrowDownIcon\"><path d=\"M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z\"></path></svg>",
+    "rect": {
+      "x": 630.578125,
+      "y": 5334.9296875,
+      "width": 27.421875,
+      "height": 27.421875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-isbajm-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"IconHelpRounded\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4\"></path></svg>",
+    "rect": {
+      "x": 645.8125,
+      "y": 5306.953125,
+      "width": 19.1875,
+      "height": 19.1875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-p8396i-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityOffIcon\"><path d=\"M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7M2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2m4.31-.78 3.15 3.15.02-.16c0-1.66-1.34-3-3-3z\"></path></svg>",
+    "rect": {
+      "x": 352.609375,
+      "y": 5586.5625,
+      "width": 18.390625,
+      "height": 18.390625
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-isbajm-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"IconHelpRounded\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4\"></path></svg>",
+    "rect": {
+      "x": 353.8125,
+      "y": 5557.875,
+      "width": 19.1875,
+      "height": 19.1875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-p8396i-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityOffIcon\"><path d=\"M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7M2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2m4.31-.78 3.15 3.15.02-.16c0-1.66-1.34-3-3-3z\"></path></svg>",
+    "rect": {
+      "x": 352.609375,
+      "y": 5699.015625,
+      "width": 18.390625,
+      "height": 18.390625
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-isbajm-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"IconHelpRounded\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4\"></path></svg>",
+    "rect": {
+      "x": 353.8125,
+      "y": 5670.328125,
+      "width": 19.1875,
+      "height": 19.1875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-p8396i-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityOffIcon\"><path d=\"M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7M2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2m4.31-.78 3.15 3.15.02-.16c0-1.66-1.34-3-3-3z\"></path></svg>",
+    "rect": {
+      "x": 352.609375,
+      "y": 5770.09375,
+      "width": 18.390625,
+      "height": 18.390625
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-isbajm-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"IconHelpRounded\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4\"></path></svg>",
+    "rect": {
+      "x": 353.8125,
+      "y": 5741.40625,
+      "width": 19.1875,
+      "height": 19.1875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-p8396i-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityOffIcon\"><path d=\"M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7M2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2m4.31-.78 3.15 3.15.02-.16c0-1.66-1.34-3-3-3z\"></path></svg>",
+    "rect": {
+      "x": 352.609375,
+      "y": 5841.171875,
+      "width": 18.390625,
+      "height": 18.390625
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-isbajm-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"IconHelpRounded\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4\"></path></svg>",
+    "rect": {
+      "x": 353.8125,
+      "y": 5812.484375,
+      "width": 19.1875,
+      "height": 19.1875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-10v8opu-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityIcon\"><path d=\"M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3\"></path></svg>",
+    "rect": {
+      "x": 189.84375,
+      "y": 5958.5625,
+      "width": 22.84375,
+      "height": 22.84375
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-10v8opu-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityIcon\"><path d=\"M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3\"></path></svg>",
+    "rect": {
+      "x": 773.84375,
+      "y": 5958.5625,
+      "width": 22.84375,
+      "height": 22.84375
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-10v8opu-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityIcon\"><path d=\"M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3\"></path></svg>",
+    "rect": {
+      "x": 207.3125,
+      "y": 6025.40625,
+      "width": 22.84375,
+      "height": 22.84375
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-10v8opu-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityIcon\"><path d=\"M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3\"></path></svg>",
+    "rect": {
+      "x": 755.65625,
+      "y": 6025.40625,
+      "width": 22.84375,
+      "height": 22.84375
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-10v8opu-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityIcon\"><path d=\"M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3\"></path></svg>",
+    "rect": {
+      "x": 198.21875,
+      "y": 6092.25,
+      "width": 22.84375,
+      "height": 22.84375
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-10v8opu-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"VisibilityIcon\"><path d=\"M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3\"></path></svg>",
+    "rect": {
+      "x": 790.375,
+      "y": 6159.09375,
+      "width": 22.84375,
+      "height": 22.84375
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-isbajm-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"IconHelpRounded\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4\"></path></svg>",
+    "rect": {
+      "x": 353.8125,
+      "y": 6238.9375,
+      "width": 19.1875,
+      "height": 19.1875
+    }
+  },
+  {
+    "html": "<svg class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-isbajm-MuiSvgIcon-root\" focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"IconHelpRounded\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4\"></path></svg>",
+    "rect": {
+      "x": 645.8125,
+      "y": 6238.9375,
+      "width": 19.1875,
+      "height": 19.1875
+    }
+  }
+]

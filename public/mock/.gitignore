@@ -1,0 +1,6 @@
+# Ignore all generated mock JSON files recursively
+**/*.json
+
+# Keep folder structure in git
+!.gitignore
+!.gitkeep

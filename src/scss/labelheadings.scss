@@ -1,0 +1,85 @@
+@use './variables' as *;
+
+.labelHeadingRoot {
+  color: $headingColor;
+  letter-spacing: 0.01rem;
+  font-size: 0.01rem;
+  //font-family: 'Calibri,sans-comic, Connections, Roboto, Calibri, sans-serif';
+  &.bold {
+    font-weight: $bold;
+  }
+  &.boldish {
+    font-weight: $boldish;
+  }
+  &.regular {
+    font-weight: $regular;
+  }
+  &.light {
+    font-weight: $light;
+  }
+  &.dark {
+    color: $headingColorSecondary;
+  }
+  &.errorColor {
+    color: $red;
+  }
+  &.disabled {
+    color: var(--color-disabled, var(--color-gray-200)) !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    text-decoration: none !important;
+  }
+  &.link {
+    color: var(--color-link);
+    cursor: pointer;
+    text-decoration: none !important;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.labelHeadingH1B {
+  font-size: 20px;
+  font-weight: $bold;
+}
+
+.labelHeadingH1 {
+  font-size: 20px;
+  font-weight: $boldish;
+}
+
+.labelHeadingH2 {
+  font-size: 18px;
+  font-weight: $regular;
+}
+
+.labelHeadingH3 {
+  font-size: .8rem;
+  font-weight: $light;
+}
+
+.labelHeadingH3 {
+  font-size: .8rem;
+  font-weight: $light;
+}
+
+.labelHeadingH4 {
+  font-size: .8rem;
+  font-weight: $light;
+}
+
+.labelHeadingH5 {
+  font-size: .8rem;
+  font-weight: $light;
+}
+
+.labelHeadingH6 {
+  font-size: .8rem;
+  font-weight: $light;
+}
+
+// .labelHeadingRoot {
+
+// }

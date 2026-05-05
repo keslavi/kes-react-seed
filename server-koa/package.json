@@ -1,0 +1,45 @@
+
+{
+  "name": "react-seed",
+  "version": "1.0.0",
+  "description": "Koa server for kanban application with file-based storage",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "nodemon src/index.js",
+    "mock-encrypt": "node ./scripts/mock-data.js encrypt",
+    "mock-decrypt": "node ./scripts/mock-data.js decrypt",
+    "mock-sync": "node ./scripts/mock-sync.js",
+    "mock-encrypt-force": "node --input-type=module -e \"import('./src/services/mock-data.service.js').then(m => m.encryptChangedIifeFiles({ force: true }))\"",
+    "mock-decrypt-force": "node --input-type=module -e \"import('./src/services/mock-data.service.js').then(m => m.decryptChangedIifeFiles({ force: true }))\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd .. && npm install && npm run build && node -e \"const fs=require('fs');const path=require('path');const copyDir=(src,dest)=>{if(!fs.existsSync(dest))fs.mkdirSync(dest,{recursive:true});const entries=fs.readdirSync(src,{withFileTypes:true});for(const entry of entries){const srcPath=path.join(src,entry.name);const destPath=path.join(dest,entry.name);if(entry.isDirectory()){copyDir(srcPath,destPath);}else{fs.copyFileSync(srcPath,destPath);}}};copyDir('./dist','./server-koa/public');\"",
+    "start:prod": "NODE_ENV=production node src/index.js"
+  },
+  "nodemonConfig": {
+    "ignore": ["./data/**"]
+  },
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.4.0",
+    "@koa/cors": "^5.0.0",
+    "@koa/router": "^12.0.1",
+    "axios": "^1.13.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.6.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.16.1",
+    "koa-bodyparser": "^4.4.1",
+    "koa-logger": "^3.2.1",
+    "koa-static": "^5.0.0",
+    "mongoose": "^8.9.5",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
