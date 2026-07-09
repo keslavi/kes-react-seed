@@ -1,5 +1,7 @@
 import api from "@/store/api";
 import { toast } from "react-toastify";
+import { mockLoad } from "@/test/msw/mockLoad";
+
 
 export const taskSlice = (set, get) => ({
   tasks: [],
@@ -8,17 +10,15 @@ export const taskSlice = (set, get) => ({
   taskList: async () => {
     const url = "public/tasks";
     try {
-      const res = await api.get(url);
-      const tasks = res.data;
-
+      /*const tasks = (await api.get(url)).data; //usual code*/
+      const tasks = (await apiGet(url)).data; //DO NOT COPY THIS CODE INTO OTHER SLICES
+      
       let option = get().option ||{};
       if(!option.task) {
         get().optionRetrieve("task");
-        // option={...option,...{task:optionTask}}
-        // set({option},undefined,"optionRetrieve");
       }
       
-      set({ tasks });
+      set({ tasks }, undefined, url);
     } catch (e) {
       toast.error(`<>${url} <br/>${e.message}`);
     }
@@ -26,8 +26,8 @@ export const taskSlice = (set, get) => ({
   taskRetrieve: async (id) => {
     const url = `public/tasks/${id}`;
     try {
-      const res = await api.get(url);
-      const task = res.data;
+      /*const task = (await api.get(url)).data; //usual code*/
+      const task = (await apiGet(url, id)).data; //DO NOT COPY THIS CODE INTO OTHER SLICES
       set({ task }, undefined, url);
       
       let option = get().option ||{};
@@ -67,3 +67,27 @@ export const taskSlice = (set, get) => ({
 
 export default taskSlice;
 
+
+/*
+  NOT PART OF USUAL TEMPLATE, DO NOT COPY THIS CODE INTO OTHER SLICES
+  if api call fails, try to load from mock data
+*/
+const apiGet = async (url, id = null) => {
+  let raw;
+
+  try {
+    raw = (await api.get(url, { suppressHttpError: true })).data;
+  } catch (apiError) {
+    try {
+      raw = await mockLoad("task");
+    } catch {
+      throw apiError;
+    }
+  }
+
+  const data = id != null
+    ? (Array.isArray(raw) ? raw.find((x) => x.id == id) : raw)
+    : (Array.isArray(raw) ? raw.filter((x) => x.id !== 0) : raw);
+
+  return { data };
+};

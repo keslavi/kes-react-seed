@@ -117,7 +117,9 @@ export const Header = (props) => {
         <NavLink to={x.link} key={x.link}>
           {({ isActive }) => (
             <MenuItem onClick={onCloseNavMenu} selected={isActive}>
-              <Typography textAlign="center">{x.text}</Typography>
+              <Typography sx={{
+                textAlign: "center"
+              }}>{x.text}</Typography>
             </MenuItem>
           )}
         </NavLink>

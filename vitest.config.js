@@ -4,6 +4,11 @@
 import { defineConfig } from 'vitest/config';
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { loadEnv } from "vite";
+import { getFormhelperAliases } from "./config/formhelper-resolve.js";
+
+const env = loadEnv("test", process.cwd(), "");
+const formhelperAliases = getFormhelperAliases({ env, command: "serve" });
 
 // Create a test-specific config that doesn't depend on the main vite config
 export default defineConfig({
@@ -45,7 +50,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "@formhelper": path.resolve(__dirname, "./formhelper-mui-dist/formhelper-mui.js"),
+      ...formhelperAliases,
       "config": path.resolve(__dirname, "./config/config.js"),
       "components": path.resolve(__dirname, "./src/components"),
       "helpers": path.resolve(__dirname, "./src/helpers"),
@@ -71,7 +76,7 @@ export default defineConfig({
       'react/jsx-dev-runtime',
     ],
     exclude: [
-      '@mui/icons-material'
+      '@mui/icons-material',
     ],
     esbuildOptions: {
       // Ensure React 19 compatibility

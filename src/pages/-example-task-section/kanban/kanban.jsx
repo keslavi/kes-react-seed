@@ -117,42 +117,50 @@ export const Kanban = () => {
                       }}
                     >
                     <CardContent sx={{ pb: 2, pt: 1.5, '&:last-child': { pb: 2 } }}>
-                      <Typography 
-                        variant="subtitle1" 
-                        component="div" 
-                        fontWeight={600}
-                        mb={1}
-                        color="text.primary"
-                      >
+                      <Typography
+                        variant="subtitle1"
+                        component="div"
+                        sx={{
+                          fontWeight: 600,
+                          mb: 1,
+                          color: "text.primary"
+                        }}>
                         {task.subject}
                       </Typography>
-                      <Typography 
-                        variant="body2" 
-                        color="text.secondary"
-                        mb={2}
+                      <Typography
+                        variant="body2"
                         sx={{
+                          color: "text.secondary",
+                          mb: 2,
                           overflow: 'hidden',
                           textOverflow: 'ellipsis',
                           display: '-webkit-box',
                           WebkitLineClamp: 2,
-                          WebkitBoxOrient: 'vertical',
-                        }}
-                      >
+                          WebkitBoxOrient: 'vertical'
+                        }}>
                         {task.body}
                       </Typography>
-                      <Box 
-                        display="flex" 
-                        alignItems="center" 
-                        justifyContent="space-between"
-                        pt={1}
-                        borderTop="1px solid"
-                        borderColor="divider"
-                      >
-                        <Box display="flex" alignItems="center" gap={1}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          pt: 1,
+                          borderTop: "1px solid",
+                          borderColor: "divider"
+                        }}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 1
+                          }}>
                           <Avatar sx={{ width: 24, height: 24, bgcolor: 'primary.main' }}>
                             <PersonIcon sx={{ fontSize: 16 }} />
                           </Avatar>
-                          <Typography variant="caption" color="text.secondary">
+                          <Typography variant="caption" sx={{
+                            color: "text.secondary"
+                          }}>
                             {task.userAssigned || "Unassigned"}
                           </Typography>
                         </Box>
@@ -170,7 +178,12 @@ export const Kanban = () => {
               ))}
               {tasksByStatus[status.key].tasks.length === 0 && (
                 <Box className="kanban-empty">
-                  <Typography variant="body2" color="text.secondary" fontStyle="italic">
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "text.secondary",
+                      fontStyle: "italic"
+                    }}>
                     No tasks
                   </Typography>
                 </Box>

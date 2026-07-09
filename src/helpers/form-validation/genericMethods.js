@@ -76,7 +76,7 @@ yup.addMethod(yup.string,"required",function(message){
 yup.addMethod(yup.string, "trim2",function(){
   return this
     .trim()
-    .transform(value=>value.replace(/[^ -~]+/g, "*"))
+    .transform(value=>value.replace(/[^ -~]+/g, "*"));
 })
 
 /**

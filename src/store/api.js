@@ -86,7 +86,9 @@ axios.interceptors.response.use(
     if (config?.blockUi !== true) {
       useStoreDirectly.getState().apiEndRequest();
     }
-    messageHttpError(error);
+    if (config?.suppressHttpError !== true) {
+      messageHttpError(error);
+    }
 
     return Promise.reject(error);
   }

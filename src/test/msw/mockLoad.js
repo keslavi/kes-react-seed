@@ -100,6 +100,16 @@ const getEncryptedOnlyMode = (isNode) => {
 
 export const clearMockLoadCache = () => {};
 
+const looksLikeHtml = (content) => /^\s*</.test(content);
+
+const isRealStaticFile = (response, content) => {
+  const contentType = response.headers.get('content-type') || '';
+  if (contentType.includes('text/html')) {
+    return false;
+  }
+  return !looksLikeHtml(content);
+};
+
 export const mockLoad = async (url) => {
   // Simple and reliable Node.js detection
   const isNode = typeof process !== 'undefined' && process.versions && process.versions.node;
@@ -185,16 +195,12 @@ export const mockLoad = async (url) => {
         const response = await fetch(`/mock/${url}.iife.js`);
         if (response.ok) {
           const fileContent = await response.text();
-          //console.log(["all"], `[MSW] Successfully fetched /mock/${url}.iife.js, content length: ${fileContent.length}`);
 
-          // Execute the IIFE and return the result
-          const data = eval(fileContent);
-
-          // console.log(["all"], `[MSW] Successfully loaded mock data for ${url} from browser`);
-          return data;
-        }
-
-        if (response.status !== 404) {
+          if (isRealStaticFile(response, fileContent)) {
+            const data = eval(fileContent);
+            return data;
+          }
+        } else if (response.status !== 404) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
       }
@@ -209,7 +215,12 @@ export const mockLoad = async (url) => {
             throw new Error('Mock data key is missing. Set window.__MOCK_DATA_KEY__ or VITE_MOCK_DATA_KEY');
           }
 
-          const envelope = await encryptedResponse.json();
+          const encryptedText = await encryptedResponse.text();
+          if (!isRealStaticFile(encryptedResponse, encryptedText)) {
+            throw new Error('Encrypted mock response was HTML, not JSON');
+          }
+
+          const envelope = JSON.parse(encryptedText);
           const decryptedText = await decryptEnvelope(envelope, mockDataKey, false);
           return JSON.parse(decryptedText);
         } catch (error) {

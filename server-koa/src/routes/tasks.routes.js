@@ -1,18 +1,8 @@
 import Router from '@koa/router';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import os from 'os';
+import { loadMockData, writeMockData } from '../services/mock-data.service.js';
 
 const r = new Router();
-
-// Get the directory name using ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Define data directory path
-const DATA_DIR  = path.join(__dirname, '..', '..', 'data');
-const TASK_FILE = path.join(DATA_DIR, 'task.iife.js');
 
 // In-memory task data storage
 let taskData = [];
@@ -30,21 +20,12 @@ const getUsername = (ctx) => {
     return username;
 };
 
-// Load task data from IIFE file
 const loadData = () => {
     try {
-        if (!fs.existsSync(TASK_FILE)) {
-            console.log('Task IIFE file does not exist, starting with empty data');
-            taskData = [];
-            return;
-        }
-
-        const fileContent = fs.readFileSync(TASK_FILE, 'utf8');
-        taskData = eval(fileContent);
-
-        console.log(`Task data loaded: ${taskData.length} tasks from IIFE file`);
+        taskData = loadMockData('task', { defaultValue: [] });
+        console.log(`Task data loaded: ${taskData.length} tasks`);
     } catch (error) {
-        console.error('Error loading task data from IIFE file:', error);
+        console.error('Error loading task data:', error);
         taskData = [];
     }
 };
@@ -59,13 +40,11 @@ const readData = () => {
 const writeData = (data) => {
     taskData = data;
 
-    // Write data back to IIFE file format
     try {
-        const iifeContent = `(() => (${JSON.stringify(data, null, 2)}))()\n`;
-        fs.writeFileSync(TASK_FILE, iifeContent, 'utf8');
+        writeMockData('task', data);
         console.log('Task data persisted to IIFE file');
     } catch (error) {
-        console.error('Error writing task data to IIFE file:', error);
+        console.error('Error writing task data:', error);
         throw new Error('Failed to persist task data');
     }
 }

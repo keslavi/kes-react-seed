@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 // JSX Runtime fallback for compatibility
 import "./jsx-runtime-fallback.js";
+import "@/config";
 //import App from "./app"; //loaded in router
 import Router from "./router";
 //import { useStore } from "./store";
@@ -13,7 +14,6 @@ import { ThemeProvider } from "./theme-material";
 
 import "./helpers/extensions/console-extension";
 import "./helpers/extensions/global-extensions";
-import "./helpers/extensions/env-extension.js";
 
 //main should copy to ./trg/../src-unedited
 //console.logGroup.test(); //works in any *.js, *.jsx file/*

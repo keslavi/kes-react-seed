@@ -1,31 +1,17 @@
 import Router from '@koa/router';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { loadMockData, writeMockData } from '../services/mock-data.service.js';
 
 const r = new Router();
-
-// Get the directory name using ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Define data directory path
-const DATA_DIR = path.join(__dirname, '..', '..', 'data');
 
 // In-memory options storage
 let optionsData = {};
 
-// Load options from IIFE file
 const loadOptions = () => {
     try {
-        
-        const optionsFilePath = path.join(DATA_DIR, 'options.iife.js');
-        const optionsFileContent = fs.readFileSync(optionsFilePath, 'utf8');
-        optionsData = eval(optionsFileContent);
-        console.log('Options loaded from IIFE file');
+        optionsData = loadMockData('options', { defaultValue: {} });
+        console.log('Options loaded');
     } catch (error) {
-        console.error('Error loading options from IIFE file:', error);
-        // Fallback to empty options
+        console.error('Error loading options:', error);
         optionsData = {};
     }
 };
@@ -39,15 +25,12 @@ const readOptions = () => {
 
 const writeOptions = (data) => {
     optionsData = data;
-    
-    // Write data back to IIFE file format
+
     try {
-        const optionsFilePath = path.join(DATA_DIR, 'options.iife.js');
-        const iifeContent = `(() => (${JSON.stringify(data, null, 4)}))()\n`;
-        fs.writeFileSync(optionsFilePath, iifeContent, 'utf8');
+        writeMockData('options', data, { indent: 4 });
         console.log('Options persisted to IIFE file');
     } catch (error) {
-        console.error('Error writing options to IIFE file:', error);
+        console.error('Error writing options:', error);
         throw new Error('Failed to persist options');
     }
 }

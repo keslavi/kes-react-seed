@@ -3,40 +3,47 @@
   eventually, public/config-override.js 
   will be used to adjust with celestial variables in deployment.
 */
-export const config= {
-  api:"/api",
-  reduxLogger:false,
-  env:"local",
-  debug: import.meta.env.VITEST ? false : true,
-  msw:false,
-}
-
-const parseBoolean = (value) => {
-  if (typeof value === 'boolean') return value;
-  if (typeof value !== 'string') return undefined;
-
-  const normalized = value.trim().toLowerCase();
-  if (["1", "true", "yes", "on"].includes(normalized)) return true;
-  if (["0", "false", "no", "off"].includes(normalized)) return false;
-  return undefined;
+const isTruthyEnv = (key, fallback = false) => {
+  const value = import.meta.env[key];
+  if (value === undefined) return fallback;
+  return value === 'true';
 };
 
-const runtimeOverride = globalThis?.configOverride || globalThis?.config || {};
-const envMsw = parseBoolean(import.meta.env?.VITE_MSW);
-const overrideMsw = parseBoolean(runtimeOverride?.msw);
+const configOverride = () => {
+  const override = globalThis.configOverride ?? {};
+  const toBoolean = (value) => {
+    if (typeof value === 'boolean') return value;
+    if (typeof value !== 'string') return value;
 
-if (!globalThis.config) {
-  globalThis.config = {
-    ...config,
-    ...runtimeOverride,
-    msw: overrideMsw ?? envMsw ?? config.msw,
+    const normalized = value.trim().toLowerCase();
+    if (['true', 'yes'].includes(normalized)) return true;
+    if (['false', 'no'].includes(normalized)) return false;
+    return value;
   };
-}
 
-config.api = globalThis.config.api;
-config.reduxLogger = globalThis.config.reduxLogger;
-config.env = globalThis.config.env;
-config.debug = globalThis.config.debug;
-config.msw = globalThis.config.msw;
+  return Object.fromEntries(
+    Object.entries(override).map(([key, value]) => [key, toBoolean(value)])
+  );
+};
 
+const buildEnv = () => {
+  const href = globalThis.location?.hostname?.toLowerCase?.() ?? "";
+
+  return Object.freeze({
+    isLocal: href.includes("localhost"),
+    isDev: href.includes("dev"),
+    isPl: href.includes("pl"),
+  });
+};
+
+export const config = {
+  api: "/api",
+  reduxLogger: false,
+  env: buildEnv(),
+  debug: isTruthyEnv('VITE_DEBUG',true),
+  msw: isTruthyEnv('VITE_MSW'),
+  ...configOverride(),
+};
+globalThis.config = config;
+globalThis.env = config.env;
 export default config;

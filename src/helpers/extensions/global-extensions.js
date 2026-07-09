@@ -1,4 +1,4 @@
-import { isEmpty, isTruthy, isFalsy } from "../../../formhelper-mui-dist/formhelper-mui.js";
+import { isEmpty, isTruthy, isFalsy } from "@formhelper";
 
 globalThis.isEmpty = isEmpty;
 globalThis.isTruthy = isTruthy;

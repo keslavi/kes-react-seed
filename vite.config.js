@@ -1,6 +1,12 @@
 import path from "path";
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv, normalizePath } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import { viteStaticCopy } from "vite-plugin-static-copy";
+import {
+  FORMHELPER_STORYBOOK_PUBLIC_DIR,
+  getFormhelperAliases,
+  getFormhelperStorybookStaticDir,
+} from "./config/formhelper-resolve.js";
 
 // Plugin to fix prop-types import issues
 const propTypesFixPlugin = () => { 
@@ -27,6 +33,10 @@ const propTypesFixPlugin = () => {
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
+  const formhelperAliases = getFormhelperAliases({ env, command });
+  const storybookStaticDir = getFormhelperStorybookStaticDir();
+
   const plugins = [
     react({
       // Explicit JSX configuration for React 19
@@ -39,6 +49,14 @@ export default defineConfig(({ command, mode }) => {
       ]
     }), 
     propTypesFixPlugin(),
+    viteStaticCopy({
+      targets: [
+        {
+          src: normalizePath(path.join(storybookStaticDir, "**/*")),
+          dest: FORMHELPER_STORYBOOK_PUBLIC_DIR,
+        },
+      ],
+    }),
   ];
   
   return {
@@ -75,7 +93,7 @@ export default defineConfig(({ command, mode }) => {
             // Split vendor chunks
             'vendor-react': ['react', 'react-dom', 'react-router-dom'],
             'vendor-mui': ['@mui/material', '@mui/icons-material', '@emotion/react', '@emotion/styled'],
-            'vendor-utils': ['lodash', 'moment', 'axios', 'yup', 'zustand'],
+            'vendor-utils': ['lodash', 'dayjs', 'axios', 'yup', 'zustand'],
           },
           // Ensure chunks are named consistently
           chunkFileNames: 'assets/[name]-[hash].js',
@@ -88,15 +106,7 @@ export default defineConfig(({ command, mode }) => {
       extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json'],
       alias: {
         "@": path.resolve(__dirname, "./src"),
-        // formhelper-mui internal imports use `@x/…` so they never collide with seed `@/`
-        ...(command === "build"
-          ? {}
-          : {
-              "@x": path.resolve(__dirname, "../formhelper-mui/src"),
-            }),
-        "@formhelper": command === 'build'
-          ? path.resolve(__dirname, "./formhelper-mui-dist/formhelper-mui.js")
-          : path.resolve(__dirname, "../formhelper-mui/src/index.ts"),
+        ...formhelperAliases,
         "components": path.resolve(__dirname, "./src/components"),
         "config": path.resolve(__dirname, "./config/config.js"),
         "helpers": path.resolve(__dirname, "./src/helpers"),
@@ -124,7 +134,7 @@ export default defineConfig(({ command, mode }) => {
         'react/jsx-dev-runtime',
       ],
       exclude: [
-        '@mui/icons-material'
+        '@mui/icons-material',
       ],
       esbuildOptions: {
         // Ensure React 19 compatibility

@@ -1,7 +1,6 @@
 // https://mui.com/material-ui/customization/theming/
 // https://mui.com/material-ui/customization/theme-components/
 
-import React from 'react';
 import { createTheme, ThemeProvider as MuiThemeProvider, alpha as muiAlpha } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 

@@ -13,7 +13,7 @@ loadEnv({ path: resolve(__dirname, '..', '.env.local') });
 loadEnv({ path: resolve(__dirname, '..', '.env') });
 
 const serverEncDir = resolve(__dirname, '..', 'data', 'enc');
-const seedEncDir = resolve(__dirname, '..', '..', 'seed', 'public', 'mock', 'enc');
+const publicEncDir = resolve(__dirname, '..', '..', 'public', 'mock', 'enc');
 
 const ensureDir = (dirPath) => {
   mkdirSync(dirPath, { recursive: true });
@@ -61,48 +61,48 @@ const copyWithParents = (fromPath, toPath) => {
 
 const syncNewestEncFiles = () => {
   ensureDir(serverEncDir);
-  ensureDir(seedEncDir);
+  ensureDir(publicEncDir);
 
   const serverFiles = collectEncFiles(serverEncDir);
-  const seedFiles = collectEncFiles(seedEncDir);
-  const allRelativePaths = new Set([...serverFiles.keys(), ...seedFiles.keys()]);
+  const publicFiles = collectEncFiles(publicEncDir);
+  const allRelativePaths = new Set([...serverFiles.keys(), ...publicFiles.keys()]);
 
   let copiedToServer = 0;
-  let copiedToSeed = 0;
+  let copiedToPublic = 0;
   let unchanged = 0;
 
   for (const relativePath of allRelativePaths) {
     const serverFile = serverFiles.get(relativePath);
-    const seedFile = seedFiles.get(relativePath);
+    const publicFile = publicFiles.get(relativePath);
 
     const serverPath = join(serverEncDir, relativePath);
-    const seedPath = join(seedEncDir, relativePath);
+    const publicPath = join(publicEncDir, relativePath);
 
-    if (serverFile && !seedFile) {
-      copyWithParents(serverFile.path, seedPath);
-      copiedToSeed += 1;
-      console.log(`-> seed/public/mock/enc: ${relativePath}`);
+    if (serverFile && !publicFile) {
+      copyWithParents(serverFile.path, publicPath);
+      copiedToPublic += 1;
+      console.log(`-> public/mock/enc: ${relativePath}`);
       continue;
     }
 
-    if (!serverFile && seedFile) {
-      copyWithParents(seedFile.path, serverPath);
+    if (!serverFile && publicFile) {
+      copyWithParents(publicFile.path, serverPath);
       copiedToServer += 1;
       console.log(`-> server-koa/data/enc: ${relativePath}`);
       continue;
     }
 
-    if (serverFile.mtimeMs > seedFile.mtimeMs) {
-      copyWithParents(serverFile.path, seedPath);
-      copiedToSeed += 1;
-      console.log(`server newer -> seed/public/mock/enc: ${relativePath}`);
+    if (serverFile.mtimeMs > publicFile.mtimeMs) {
+      copyWithParents(serverFile.path, publicPath);
+      copiedToPublic += 1;
+      console.log(`server newer -> public/mock/enc: ${relativePath}`);
       continue;
     }
 
-    if (seedFile.mtimeMs > serverFile.mtimeMs) {
-      copyWithParents(seedFile.path, serverPath);
+    if (publicFile.mtimeMs > serverFile.mtimeMs) {
+      copyWithParents(publicFile.path, serverPath);
       copiedToServer += 1;
-      console.log(`seed newer -> server-koa/data/enc: ${relativePath}`);
+      console.log(`public newer -> server-koa/data/enc: ${relativePath}`);
       continue;
     }
 
@@ -111,7 +111,7 @@ const syncNewestEncFiles = () => {
 
   console.log('\nSync summary');
   console.log(`Copied to server-koa/data/enc: ${copiedToServer}`);
-  console.log(`Copied to seed/public/mock/enc: ${copiedToSeed}`);
+  console.log(`Copied to public/mock/enc: ${copiedToPublic}`);
   console.log(`Unchanged: ${unchanged}`);
 };
 

@@ -1,5 +1,5 @@
 
-import { isTruthy, isFalsy } from '../../formhelper-mui-dist/formhelper-mui.js';
+import { isTruthy, isFalsy } from '@formhelper';
 
 export { isTruthy, isFalsy };
 

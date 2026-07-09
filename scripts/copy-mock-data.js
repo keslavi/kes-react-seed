@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const seedRoot = resolve(__dirname, '..');
 
-const sourceDir = resolve(seedRoot, '..', 'server-koa', 'data', 'enc');
+const sourceDir = resolve(seedRoot, 'server-koa', 'data', 'enc');
 const targetDir = resolve(seedRoot, 'public', 'mock', 'enc');
 const encryptedOnly = ['1', 'true', 'yes', 'on'].includes(String(
   process.env.MOCK_DATA_ENCRYPTED_ONLY || process.env.VITE_MOCK_DATA_ENCRYPTED_ONLY || ''

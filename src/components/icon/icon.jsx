@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import PanoramaFishEyeSharpIcon from '@mui/icons-material/PanoramaFishEyeSharp';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -22,7 +22,7 @@ import ArrowBack from '@mui/icons-material/ArrowBack';
 export const iconType = {
   complete: CheckCircleIcon,
   completeContain: CheckCircleIcon,
-  completeOutline: CheckCircleOutlineIcon,
+  completeOutline: CheckCircleOutlinedIcon,
   uncomplete: PanoramaFishEyeSharpIcon,
   forwardArrow: ArrowForwardIosIcon,
   arrow: ArrowForwardIosIcon,

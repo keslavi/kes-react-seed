@@ -13,7 +13,6 @@ const formhelperDir = path.resolve(repoDir, "formhelper-mui");
 const formhelperDistDir = path.join(formhelperDir, "dist");
 const formhelperStorybookDir = path.join(formhelperDir, "storybook-static");
 const seedDistDir = path.join(seedDir, "formhelper-mui-dist");
-const seedStorybookDir = path.join(seedDir, "public", "storybook");
 
 const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
 
@@ -81,7 +80,5 @@ if (!existsSync(formhelperStorybookDir)) {
 console.log("Copying formhelper-mui dist into seed...");
 replaceDirectory(formhelperDistDir, seedDistDir);
 
-console.log("Copying storybook into seed/public/storybook...");
-replaceDirectory(formhelperStorybookDir, seedStorybookDir);
-
-console.log("formhelper-mui assets synced into seed.");
+console.log("formhelper-mui dist synced into seed.");
+console.log("Storybook static is served from kes-formhelper-mui via vite-plugin-static-copy.");

@@ -1,5 +1,6 @@
 import api from "@/store/api";
 import { toast } from "react-toastify";
+import { mockLoad } from "@/test/msw/mockLoad";
 
 export const optionSlice = (set, get) => ({
   option: {},
@@ -8,8 +9,8 @@ export const optionSlice = (set, get) => ({
     const url = "public/options";
     try {
       let option = get().option;
-      const res = await api.get(url);
-      option = { ...option, ...res.data };
+      /*option = { ...option, ...(await api.get(url)).data }; //usual code*/
+      option = { ...option, ...(await apiGet(url)).data }; //DO NOT COPY THIS CODE INTO OTHER SLICES
       set({ option }, undefined, url);
     } catch (e) {
       toast.error(`<>${url} error<br/>${e.message}</>`);
@@ -20,8 +21,8 @@ export const optionSlice = (set, get) => ({
     try {
       let option = get().option;
       if (!option.hasOwnProperty(id)) {
-        const res = await api.get(url);
-        option = { ...option, ...res.data };
+        /*option = { ...option, ...(await api.get(url)).data }; //usual code*/
+        option = { ...option, ...(await apiGet(url)).data }; //DO NOT COPY THIS CODE INTO OTHER SLICES
         set({ option }, undefined, url);
       }
     } catch (e) {
@@ -31,3 +32,24 @@ export const optionSlice = (set, get) => ({
 });
 
 export default optionSlice;
+
+
+/*
+  NOT PART OF USUAL TEMPLATE, DO NOT COPY THIS CODE INTO OTHER SLICES
+  if api call fails, try to load from mock data
+*/
+const apiGet = async (url) => {
+  let raw;
+
+  try {
+    raw = (await api.get(url, { suppressHttpError: true })).data;
+  } catch (apiError) {
+    try {
+      raw = await mockLoad("options");
+    } catch {
+      throw apiError;
+    }
+  }
+
+  return { data: raw };
+};

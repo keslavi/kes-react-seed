@@ -1,7 +1,7 @@
 # Working IIFE files are decrypted at startup from data/enc/*.enc.json
-# Edit them freely; they are re-encrypted to data/enc on server shutdown.
+# Edit them freely; run npm run mock-encrypt to update checked-in enc files.
 *.iife.js
 !*.init.iife.js
 
-# Runtime / generated JSON (enc.json lives in data/enc/, not here)
-*.json
+# Loose JSON in data/ root only (enc/*.enc.json are checked in)
+/*.json

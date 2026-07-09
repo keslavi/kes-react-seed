@@ -10,7 +10,7 @@ import fs from 'fs';
 
 import config from './config.js';
 import { errorHandler } from './middleware/errorHandler.js';
-import { decryptChangedIifeFiles } from './services/mock-data.service.js';
+import { decryptChangedIifeFiles, encryptChangedIifeFiles } from './services/mock-data.service.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -82,14 +82,22 @@ async function main() {
     }
   });
 
+  const shutdownEncrypt = () => {
+    encryptChangedIifeFiles();
+  };
+
+  process.once('SIGINT', shutdownEncrypt);
+  process.once('SIGTERM', shutdownEncrypt);
+  process.once('beforeExit', shutdownEncrypt);
+
   app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
     console.log(`.`);
     console.log(`******************************************************************************************`);
     console.log(`📁 !IMPORTANT: if you need to check in test data changes, you MUST do npm run mock-encrypt`);
-    console.log('   - npm run mock-encrypt        # encrypt changed .iife.js -> data/enc/*.enc.json');
-    console.log('   - npm run mock-decrypt        # decrypt changed data/enc/*.enc.json -> .iife.js');
-    console.log('   - npm run mock-sync           # sync newest *.enc.json between data/enc and ../seed/public/mock/enc');
+    console.log('   - npm run mock-encrypt        # encrypt .iife.js newer than data/enc/*.enc.json');
+    console.log('   - npm run mock-decrypt        # decrypt data/enc/*.enc.json newer than .iife.js');
+    console.log('   - npm run mock-sync           # encrypt changed + sync data/enc <-> ../public/mock/enc');
     console.log('   - npm run mock-encrypt-force  # force encrypt all .iife.js');
     console.log('   - npm run mock-decrypt-force  # force decrypt all .enc.json');
     console.log(`******************************************************************************************`);
