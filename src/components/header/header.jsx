@@ -1,27 +1,3 @@
-/*
-export const Header=(props) => {
-  const {menu} =props;
-
-  const renderMenu = (menu) => {
-    if (!menu) return; //may not appear due to multiple rendering... React.StrictMode?
-    return menu.map(x=>{
-      if (x.items) { return renderMenu(x.items) }
-      return <li key={x.text}><NavLink to={x.link}>{x.text}</NavLink></li>
-    })
-  }
-
-  return (
-    <div className='navbar'>
-      {/* <textarea rows={10} cols={100} value={JSON.stringify(menu, null, 2)}></textarea> * /}
-      <ul>
-        {renderMenu(menu)}
-      </ul>
-    </div>)
-}
-
-export default Header;
-*/
-
 import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -161,7 +137,7 @@ export const Header = (props) => {
                 textDecoration: "none",
               }}
             >
-              Seed2024
+              Seed
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

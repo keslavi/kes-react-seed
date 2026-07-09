@@ -5,12 +5,6 @@ import { fileURLToPath } from "node:url";
 const seedRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEFAULT_LOCAL_PATH = "../2-kes-formhelper";
 
-/** URL path where the host app serves kes-formhelper-mui storybook-static. */
-export const FORMHELPER_STORYBOOK_BASE_PATH = "/formhelper-storybook";
-
-/** Folder name used by vite-plugin-static-copy under public/dist. */
-export const FORMHELPER_STORYBOOK_PUBLIC_DIR = "formhelper-storybook";
-
 function isFormhelperLocalEnabled(value) {
   if (value === undefined || value === null || String(value).trim() === "") {
     return false;
@@ -60,8 +54,23 @@ export function getFormhelperAliases({
 }
 
 /**
- * Directory containing the published Storybook static build inside kes-formhelper-mui.
+ * Directory containing story source files.
+ * Local dev mode (VITE_FORMHELPER_LOCAL) points to the sibling repo; otherwise npm package.
+ * Returns null when no story source is available (npm package predates story shipping).
  */
-export function getFormhelperStorybookStaticDir(seedDir = seedRoot) {
-  return path.resolve(seedDir, "node_modules/kes-formhelper-mui/storybook-static");
+export function getFormhelperStoriesDir({ env = {}, command = 'serve', seedDir = seedRoot } = {}) {
+  const useLocal = command !== 'build' && isFormhelperLocalEnabled(env.VITE_FORMHELPER_LOCAL);
+  if (useLocal) {
+    const localRoot = path.resolve(seedDir, env.VITE_FORMHELPER_PATH || DEFAULT_LOCAL_PATH);
+    const localStories = path.join(localRoot, 'src/stories');
+    if (!existsSync(localStories)) {
+      console.warn(`[formhelper] VITE_FORMHELPER_LOCAL is set but stories not found at ${localStories}`);
+      return null;
+    }
+    return localStories;
+  }
+  const npmStories = path.resolve(seedDir, 'node_modules/kes-formhelper-mui/src/stories');
+  return existsSync(npmStories) ? npmStories : null;
 }
+
+

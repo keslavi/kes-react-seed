@@ -1,12 +1,25 @@
 import path from "path";
-import { defineConfig, loadEnv, normalizePath } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 import {
-  FORMHELPER_STORYBOOK_PUBLIC_DIR,
   getFormhelperAliases,
-  getFormhelperStorybookStaticDir,
 } from "./config/formhelper-resolve.js";
+
+// Serves public/storybook-dist/index.html for any /storybook-dist/* path that
+// isn't a static asset (no extension). Prevents Vite's SPA fallback from
+// intercepting Storybook's client-side navigation.
+const storybookFallbackPlugin = () => ({
+  name: 'storybook-fallback',
+  configureServer(server) {
+    server.middlewares.use((req, _res, next) => {
+      const url = req.url ?? '';
+      if (url.startsWith('/storybook-dist/') && !url.split('?')[0].includes('.')) {
+        req.url = '/storybook-dist/index.html' + (url.includes('?') ? url.slice(url.indexOf('?')) : '');
+      }
+      next();
+    });
+  },
+});
 
 // Plugin to fix prop-types import issues
 const propTypesFixPlugin = () => { 
@@ -35,7 +48,6 @@ const propTypesFixPlugin = () => {
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const formhelperAliases = getFormhelperAliases({ env, command });
-  const storybookStaticDir = getFormhelperStorybookStaticDir();
 
   const plugins = [
     react({
@@ -49,14 +61,7 @@ export default defineConfig(({ command, mode }) => {
       ]
     }), 
     propTypesFixPlugin(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: normalizePath(path.join(storybookStaticDir, "**/*")),
-          dest: FORMHELPER_STORYBOOK_PUBLIC_DIR,
-        },
-      ],
-    }),
+    storybookFallbackPlugin(),
   ];
   
   return {

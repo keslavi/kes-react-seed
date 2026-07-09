@@ -1,5 +1,5 @@
 
-# react seed 2024
+# react seed (2026)
 straight javascript seed starter project with zustand, notifications, form validation
 
 See also: [README-mock-data.md](README-mock-data.md) for shared mock-data usage in Seed.
