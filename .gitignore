@@ -142,3 +142,10 @@ public/storybook-dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# macOS
+.DS_Store
+
+# Generated/build output
+tools/puppeteer-output/
+server-koa/public/assets/
